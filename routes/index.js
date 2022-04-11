@@ -6,7 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'index' });
 });
 router.get('/getGirlFriend', function(req, res, next) {
-  console.log(req.body,req.params)
   let obj = {
     name:'李玉华',
     age:'23',
