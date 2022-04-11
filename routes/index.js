@@ -5,7 +5,7 @@ var db = require('../config/db');
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'index'});
 });
-router.get('/getNum', (req, res) => {
+router.get('/getNum', function (req, res) {
     res.send(Math.ceil(Math.random() * 100))
 })
 router.get('/getGirlFriend', function (req, res, next) {
