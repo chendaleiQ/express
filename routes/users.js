@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var db = require('../config/db');
+let express = require('express');
+let router = express.Router();
+// let db = require('../config/db');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

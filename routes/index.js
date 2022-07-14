@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var db = require('../config/db');
+let express = require('express');
+let router = express.Router();
+// let db = require('../config/db');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     // req 是一个可读流
@@ -17,20 +17,25 @@ router.get('/', function (req, res, next) {
     // 最后设置响应体
     // res 是一个可写流
     res.write('ok')
-    res.end('1')
+    res.end('')
     // res.render('index', {title: 'index'});
 });
 router.get('/getNum', function (req, res) {
-    res.send({
-        '您的幸运数字': Math.ceil(Math.random() * 100)
-    })
+    res.send(`您的幸运数字:${Math.ceil(Math.random() * 100)}`)
 })
 router.get('/getGirlFriend', function (req, res, next) {
     let obj = {
-        name: '李玉华',
+        name: 'name',
         age: '23',
         weight: '99'
     }
     res.send(obj);
+});
+router.get('/post_form', function (req, res, next) {
+    res.send({
+        code:200,
+        data:'哈哈哈哈哈哈哈哈还好还好',
+        msg:'ok'
+    });
 });
 module.exports = router;
